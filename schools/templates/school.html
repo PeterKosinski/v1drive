@@ -1,19 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+
     <div class="row">
-        
+         
         <div class="col-md-10 col-sm-9">
-            <h3><h3>{{ school.school_name }}</h3></h3>
+            
+           <tr>
+              
+               <td>
+                   <h2>{{ school.school_name }}</h2>
+                <h2>{{ school.email }}</h2>
+               <h2>{{ school.url }}</h2>
+               <h2>{{ school.phone_number }}</h2>
+               <h2>{{ school.Lesson_Price_For_12 }}</h2>
+              <h2>{{ school.Lesson_Price_For_1 }}</h2>
+               
+               
+               </td>
+              
+             
+               
+              
+           </tr>
+           
+       
+      
             <div class="row">
                 <div class="col-xs-9">
+                     
+                    <button class="btn btn-default" onclick="location.href='{% url 'index' %}'">Back</button>
                     
-                    <button class="btn btn-default" onclick="location.href='{% url 'schools' %}'">Back To Blog</button>
-
-                   
-                  
-
-                </div>
+                    
+                     
+                     </div>
             </div>
         </div>
     </div>

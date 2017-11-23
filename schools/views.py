@@ -10,7 +10,7 @@ def all_schools(request):
 
 def view_school(request, id):
     school = get_object_or_404(School, pk=id)
-    return render(request, "school.html") 
+    return render(request, "school.html",{"school": school}) 
     
 # def viewpost(request, id):
 #     post = get_object_or_404(Post, pk=id)
