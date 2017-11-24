@@ -3,6 +3,6 @@ from .views import view_school
 
 urlpatterns = [
     
-    url(r'^school/(\d+)$', view_school, name="view_school"),
+    url(r'^school/(.+)$', view_school, name="view_school"),
 
  ]

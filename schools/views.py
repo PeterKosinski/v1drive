@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import School
+from django.template.defaultfilters import slugify
+
 
 
 
@@ -8,8 +10,8 @@ def all_schools(request):
     schools = School.objects.all()
     return render(request, "schools.html",{"schools": schools})
 
-def view_school(request, id):
-    school = get_object_or_404(School, pk=id)
+def view_school(request, slug):
+    school = get_object_or_404(School, slug=slug)
     return render(request, "school.html",{"school": school}) 
     
 # def viewpost(request, id):

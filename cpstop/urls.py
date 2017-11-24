@@ -14,16 +14,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.contrib import admin
 from schools.views import all_schools
 from schools import urls as schools_urls
+from .settings import MEDIA_ROOT
+from django.views import static
 
 
 
 
 
 urlpatterns = [
+    url(r'^admin/', admin.site.urls),
     url(r'^$', all_schools, name='index'),
     url(r'^schools/', include(schools_urls)),
+    url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
+
    
     
     

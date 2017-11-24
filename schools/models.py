@@ -2,10 +2,14 @@ from django.db import models
 
 class School(models.Model):
 
+    slug = models.SlugField(max_length=50, default="none" )
+    logo = models.ImageField(upload_to="avatars", blank=True, null=True, default="media/avatars/profile.png")
     school_name = models.CharField(max_length=200)
     email = models.EmailField(max_length=70,blank=True)
     phone_number = models.CharField(max_length=15, default=0)
     url = models.URLField()
+    rsa_number = models.CharField(max_length=8)
+
     Dublin1 = 'D1'
     Dublin2 = 'D2'
     Dublin3 = 'D3'
