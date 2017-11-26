@@ -1,9 +1,10 @@
 from django.db import models
 
+
 class School(models.Model):
 
     slug = models.SlugField(max_length=50, default="none" )
-    logo = models.ImageField(upload_to="avatars", blank=True, null=True, default="media/avatars/profile.png")
+    logo = models.ImageField(upload_to="avatars", blank=True, null=True, default="avatars/profile.png")
     school_name = models.CharField(max_length=200)
     email = models.EmailField(max_length=70,blank=True)
     phone_number = models.CharField(max_length=15, default=0)
@@ -56,9 +57,10 @@ class School(models.Model):
         (Dublin24, 'Dublin24'),
       
     )
-    Area = models.CharField(max_length=3,choices=AREAS, default='Dublin1' )
-    Lesson_Price_For_12 = models.DecimalField(max_digits=6, decimal_places=2, default=0)
-    Lesson_Price_For_1 = models.DecimalField(max_digits=6, decimal_places=2, default=0)
+    Area = models.CharField(choices=AREAS, max_length=3, default='Dublin1')
+    
+    Lesson_Price_For_12 = models.DecimalField(max_digits=6, decimal_places=0, default=0)
+    Lesson_Price_For_1 = models.DecimalField(max_digits=6, decimal_places=0, default=0)
     
     def __str__(self):
         return self.school_name

@@ -15,3 +15,25 @@ h3{
    color:grey;
    
 }
+
+nav{
+   background-color: #0fc17f;
+   height: 50px;
+   width: 100%;
+}
+
+body{
+   padding:0px;
+   width: 100%;
+}
+
+.logo{
+   font-family: 'Ubuntu', sans-serif;
+   color: white;
+   text-decoration: none;
+   
+}
+
+.logo_img{
+   width:30%;
+}

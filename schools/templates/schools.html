@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-2">
-            <img src="{{ MEDIA_URL }}{{ school.school_name.logo }}" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
+            <img src="{{ MEDIA_URL }}{{ school.logo }}" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff; border-radius:50%;" >
             
         </div>
         <div class="col-xs-8">
@@ -18,7 +18,7 @@
         
         <div class="col-xs-2">
             <h4>12 Lessons From:</h4><br>
-            <h1>{{ school.Lesson_Price_For_12 }}</h1>
+            <h1>€{{ school.Lesson_Price_For_12 }}</h1>
             
         </div>
         
