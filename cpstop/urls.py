@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from schools.views import all_schools
+from page.views import index, input_form
 from schools import urls as schools_urls
 from .settings import MEDIA_ROOT
 from django.views import static
+from blog import urls as blogposts_urls
 
 
 
@@ -26,9 +27,12 @@ from django.views import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', all_schools, name='index'),
+    url(r'^$', index, name='index'),
     url(r'^schools/', include(schools_urls)),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
+    url(r'^blogposts/', include(blogposts_urls)),
+    url(r'^input_form/', input_form, name='input_form'),
+
 
    
     

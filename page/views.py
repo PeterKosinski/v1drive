@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    return render(request, "landing.html") 
+
+def input_form(request):
+    return render(request, "input_form.html") 

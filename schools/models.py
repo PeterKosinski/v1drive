@@ -1,6 +1,7 @@
 from django.db import models
 from multiselectfield import MultiSelectField
 from tinymce.models import HTMLField
+from areas.models import Area
 
 
 class School(models.Model):
@@ -11,16 +12,27 @@ class School(models.Model):
     email = models.EmailField(max_length=70,blank=True)
     phone_number = models.CharField(max_length=15, default=0)
     url = models.URLField()
+    areas = models.ManyToManyField(Area, blank=True)
+
     
     Motorcycle = 'Motorcycle'
     Car = 'Car'
-    Bus = 'Bus'
+    CarTowing = 'CarTowing'
+    RigidTruck = 'RigidTruck'
+    ArticulatedTruck = 'ArticulatedTruck'
+    MiniBus = 'MiniBus'
+    Coach = 'Coach'
+    
     
    
     TRAININGAREAS = (
         (Motorcycle, 'Motorcycle'),
         (Car, 'Car'),
-        (Bus, 'Bus'),
+        (CarTowing, 'Car Towing'),
+        (RigidTruck, 'Rigid Truck'),
+        (ArticulatedTruck, 'Articulated Truck'),
+        (MiniBus, 'Mini Bus'),
+        (Coach, 'Coach'),
        
       
     )

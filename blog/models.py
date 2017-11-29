@@ -15,6 +15,6 @@ class BlogPost(models.Model):
     image = models.ImageField(upload_to="images", blank=True, null=True)
 
     def __str__(self):
-        return self.title
+        return self.blog_name
 
 # Create your models here.

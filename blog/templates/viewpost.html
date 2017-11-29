@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-xs-offset-2 col-xs-10">
+        <h1>{{ blogpost.blog_name | safe }}</h1>
+    </div>
+    
+</div>
+
+    <div class="row">
+        <div class="col-xs-offset-2 col-xs-10">
+            <h4>{{ blogpost.blog_content | safe }}</h4>
+        </div>
+        </div>
+        
+                <div class="col-xs-9">
+                    {% if post.image %}
+                         <img src="{{ MEDIA_URL }}{{ post.image }}" height="350px">
+                    {% endif %}
+                    <button class="btn btn-default" onclick="location.href='{% url 'blogposts' %}'">Back To </button>
+
+                </div>
+        
+     
+
+    
+{% endblock %}
