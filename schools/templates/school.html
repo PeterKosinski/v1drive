@@ -2,30 +2,73 @@
 
 {% block content %}
 
+<div class="container">
+<div class="row">
+    <div class="col-xs-offset-4 col-xs-4">
+            <h1 class="school">{{ school.school_name }}</h1> 
+            <h4>{{ school.school_type }}</h4>
+            
+            <hr>
+    </div>
+     </div>
+      <div class="row">
+                <div class="col-xs-4">
+                    <img src="{{ MEDIA_URL }}{{ school.logo }}" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff; border-radius:50%;" >
+                    <h4>{{ school.phone_number }}</h4>
+                    <h4><a href="{{ school.url }}">{{ school.url }}</a></h4>
+                    </div>
+                    <div class="col-xs-8">
+                        <h5>Areas</h5>
+                        <h4>{{ school.Area }}</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-6">
+                        <h5>Price for 12 Lessons from:</h5>
+                        <h4>€{{ school.Lesson_Price_For_12 }}</h4>
+                        </div>
+                        <div class="col-xs-6">
+                        <h5>Price for 60 mins Lesson from:</h5>
+                        <h4>€{{ school.Lesson_Price_For_1 }}</h4>
+                        </div>
+                        </div>
+                        <hr>
+                        <h5>Lesson Types</h5>
+                        
+                        {% if 'Motorcycle' in school.products %}
+                         <h5>IBT<i class="fa fa-motorcycle" aria-hidden="true"></i></h5>
+                        {% endif %} 
+                        {% if 'Car' in school.products %}
+                        <h5>EDT<i class="fa fa-car" aria-hidden="true"></i></h5>
+                        {% endif %} 
+                        {% if 'Bus' in school.products %}
+                        <i class="fa fa-bus" aria-hidden="true"></i>
+                        {% endif %} 
+                        
+                        <hr>
+                        <h5>Description</h5>
+                        <h4>{{ school.Business_des | safe }}</h4>
+                        <hr>
+                        
+                        
+                        
+                        
+                        <h5>Schools Close By</h5>
+                        {% for r in related %}
+                        {{r}},
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+                
+                
+</div>
+
 
     <div class="row">
          
         <div class="col-md-10 col-sm-9">
             
-           <tr>
-              
-               <td>
-                   <h2>{{ school.school_name }}</h2>
-                <h2>{{ school.email }}</h2>
-               <h2>{{ school.url }}</h2>
-               <h2>{{ school.phone_number }}</h2>
-               <h2>{{ school.Lesson_Price_For_12 }}</h2>
-              <h2>{{ school.Lesson_Price_For_1 }}</h2>
-              <h2>{{ school.rsa_number }}</h2>
-               
-               
-               </td>
-              
-             
-               
-              
-           </tr>
-           
+
        
       
             <div class="row">

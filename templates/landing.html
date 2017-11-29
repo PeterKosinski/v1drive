@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+    <div class="maincontainer">
+      
+   	<div class="row">
+   		<div class="col-xs-offset-1 col-xs-10">
+   			<h1 class="logo">COMPARE <span class="stop">STOP</span></h1>
+   			<p1></p1> 
+   		</div>
+   		</div>
+   		<body class="main-body">
+   		 <div class="row main">
+   		  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-xl-offset-4 col-xl-4">
+   		   <div class="row pos">
+   		       <div class="col-xs-offset-0 col-xs-6 start">
+   		       <h id="start_text">
+   		           Find your ideal driving lessons today
+   		           
+   		       </h>
+   		       </div>
+   		       <div class="col-xs-6">
+   		           <h id="enquire">
+   		           Are you a Driving School or Instructor?
+   		           
+   		       </h>
+   		           
+   		       </div>
+   		   </div>
+   		    <form class="search" action="{% url 'search' %}" method="get">
+            <input id="search_box" type="text" name="q" placeholder="County? i.e Dublin">
+            <button id="search_button" type="submit">Search</button>
+        </form>
+   	
+   		   
+   		  </div>
+   		  
+   		 </div>
+   		 <div class="row">
+   		     <div class="col-xs-6">
+   		         <p>Blog post 1</p>
+   		         <p>Click Bate Blog Post (i.e cheapest way to get your driving Licence)</p>
+   		     </div>
+   		      <div class="col-xs-6">
+   		         <p>Blog post 2</p>
+   		         
+   		     </div>
+   		     
+   		 </div>
+   		
+   		 
+   		 <div class="row discover">
+   		     <div class="col-xs-offset-3 col-xs-6">
+   		         <h3 class="discover">Discover</h3>
+   		           </div>
+   		  </div>
+   		  <div class="row">
+   		      <div class="col-xs-4">
+   		          <img class="county" src="assets/dublin.png" ></img>
+   		      </div>
+   		      <div class="col-xs-4">
+   		          <img class="county" src="assets/cork.png" ></img>
+   		          
+   		      </div>
+   		      <div class="col-xs-4">
+   		          <img class="county" src="assets/galway.png" ></img>
+   		      </div>
+   		      
+   		  </div>
+   		 
+   		 
+   		 </body>
+   		</div>
+   	
+
+    
+</body>
+</html>

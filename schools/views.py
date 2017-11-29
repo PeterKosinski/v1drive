@@ -12,11 +12,10 @@ def all_schools(request):
 
 def view_school(request, slug):
     school = get_object_or_404(School, slug=slug)
-    return render(request, "school.html",{"school": school}) 
+    related = School.objects.all().order_by('Lesson_Price_For_12')[:3]
+    return render(request, "school.html",{"school": school, "related" : related}) 
     
-# def viewpost(request, id):
-#     post = get_object_or_404(Post, pk=id)
-#     comments = Comment.objects.filter(post= post)
-#     form = BlogCommentForm()
-#     return render(request, "viewpost.html", {'post': post, 'comments': comments, 'form': form}) 
+def do_search(request):
+    schools = School.objects.filter(Area__icontains=request.GET['q'])
+    return render(request, "schools.html", {"schools": schools})        
     

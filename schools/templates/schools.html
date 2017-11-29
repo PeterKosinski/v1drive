@@ -2,18 +2,30 @@
 {% block content %}
 
  {% for school in schools %}
-<a href='{% url 'view_school' school.slug %}'>
+ <a href='{% url 'view_school' school.slug %}'>
 <div class="container">
     <div class="row">
         <div class="col-xs-2">
             <img src="{{ MEDIA_URL }}{{ school.logo }}" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff; border-radius:50%;" >
             
         </div>
-        <div class="col-xs-8">
+        <div class="col-xs-7">
+            <h4>{{ school.school_type }}</h4>
            <h3>{{ school.school_name }}</h3><br>
            <h3><td>{{ school.Area }}</td></h3><br>
        
            
+           </div>
+           <div class="col-xs-1">
+               {% if 'Motorcycle' in school.products %}
+                <i class="fa fa-motorcycle" aria-hidden="true"></i>
+                {% endif %} 
+                {% if 'Car' in school.products %}
+                <i class="fa fa-car" aria-hidden="true"></i>
+                {% endif %} 
+                {% if 'Bus' in school.products %}
+                <i class="fa fa-bus" aria-hidden="true"></i>
+                {% endif %} 
            </div>
         
         <div class="col-xs-2">

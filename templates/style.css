@@ -1,0 +1,151 @@
+/*---------------------Container*/
+
+/*---------------------Main page*/
+
+.maincontainer{
+    width:100%;
+
+    background-color: #0fc17f;
+    background-size: cover;
+  
+}
+
+.main_text{
+    color:white;
+    text-align: center;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    font-family: 'Ubuntu';
+    font-size: 3rem;
+}
+
+.subtext{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.main_body{
+    width:100%;
+    
+    
+}
+.car{
+   width:100%;
+   padding-bottom: 100%
+   
+}
+
+
+#mc_embed_signup{
+    text-align: center;
+    margin-top: 25%;
+    
+}
+
+.search{
+    text-align: center;
+}
+
+#search_box{
+    border: .5px solid lightgrey;
+    border-radius: 10px;
+     padding-left: 2%;
+     height: 60px;
+     width:50%;
+     font-size:30px;
+}
+
+#search_button{
+    border-radius: 10px;
+    border: .5px solid lightgrey;
+     
+    
+}
+
+.county{
+    width:100%;
+    border-radius: 25px;
+}
+
+.county:hover{
+    width:100%;
+    border-radius: 0px;
+}
+
+.discover{
+    text-align: center;
+    color:white;
+    letter-spacing: 2px;
+     font-family:'Ubuntu', sans-serif; 
+    
+}
+
+.start{
+    border-right: .5px solid white;
+    text-align: right;
+    
+}
+
+#enquire{
+    color:white;
+    letter-spacing: 0px;
+    font-size: 3rem;
+}
+
+#start_text{
+    font-size: 3rem;
+    color:white;
+}
+
+.pos{
+    padding-bottom: 5%;
+}
+
+
+
+/*---------------------Fonts*/
+
+.logo{
+    font-family:'Ubuntu', sans-serif; 
+    font-weight: 700;
+    width: 100%;
+    font-size: 19px;
+    letter-spacing: 9px;
+    text-align: center;
+    margin: 5% 0% 10%;
+    padding:5px;
+    color: #fefefe;
+    
+
+}
+
+.stop{
+    color: #fefefe;
+}
+
+
+/*---------------------Media Query*/
+
+
+
+@media only screen and (min-width: 500px) {
+    
+    
+    .main_text{
+        font-size: 4rem;
+    }
+    
+}
+
+@media only screen and (min-width: 800px) {
+    .logo{
+        font-size: 30px;
+    }
+    
+    .main_img{
+     
+        width: 33.3%;
+    }
+    
+    
+   
+}
