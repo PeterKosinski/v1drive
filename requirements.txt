@@ -1,0 +1,6 @@
+Django==1.11.7
+Pillow==4.3.0
+django-multiselectfield==0.1.8
+django-tinymce==2.6.0
+olefile==0.44
+pytz==2017.3
