@@ -1,24 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
+<form action="{% url 'search' %}" method="get">
+            <input type="text" name="q" autocomplete="on">
+            <button type="submit">Search</button>
+        </form><br>
+        
+        <input type="radio" onclick="filterSelection('all')" name="category" checked> Show all
+<input type="radio" onclick="filterSelection('Independent Driving Instructor')" name="category"> Independent Driving Instructor
+<input type="radio" onclick="filterSelection('Driving School')" name="category"> Driving School
+<input type="radio" onclick="filterSelection('Insurance Company')" name="category"> Insurance Company
+
+                
 
  {% for school in schools %}
  <a href='{% url 'view_school' school.slug %}'>
-<div class="container">
-    <div class="row">
+
+    <div class="filterDiv row {{ school.school_type }} ">
         <div class="col-xs-2">
             <img src="{{ MEDIA_URL }}{{ school.logo }}" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff; border-radius:50%;" >
             
         </div>
         <div class="col-xs-7">
             <h4>{{ school.school_type }}</h4>
+            <!--{% for area in school.areas.all %}-->
+            <!--<h3>{{ area }}</h3><br>-->
+            <!--{% endfor %}-->
            <h3>{{ school.school_name }}</h3><br>
            <h3><td>{{ school.Area }}</td></h3><br>
-       
            
+
            </div>
            <div class="col-xs-1">
                {% if 'Motorcycle' in school.products %}
-                <i class="fa fa-motorcycle" aria-hidden="true"></i>
+               <i class="fa fa-motorcycle" aria-hidden="true"></i>
                 {% endif %} 
                 {% if 'Car' in school.products %}
                 <i class="fa fa-car" aria-hidden="true"></i>
@@ -36,12 +50,16 @@
         
        
        
-        
+        <hr>
     </div>
-    </div>
+    
     </a>
     
-     <hr>
+          
+
+    
+     
    {% endfor %}
    
 {% endblock %}
+

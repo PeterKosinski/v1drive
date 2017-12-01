@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <!-- Fixed masthead -->
@@ -29,11 +30,7 @@
         <div class="col-md-12">
             <div class="panel">
                 <div class="panel-body">
-                    <form action="{% url 'search' %}" method="get">
-            <input type="text" name="q" autocomplete="on">
-            <button type="submit">Search</button>
-        </form><br>
-                
+                    
                     <!--blog entries-->
                     {% block content %}
                     {% endblock %}
@@ -46,7 +43,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-xs-offset-10 col-xs-2">
+            <div class="col-lg-offset-10 col-lg-2">
               <a href="#" target="_blank"><span class="typcn typcn-social-facebook"></span></a>
                 <a href="#" target="_blank"><span class="typcn typcn-social-twitter"></span></a>
                 <a href="#"><span class="typcn typcn-social-google-plus"></span></a>
@@ -58,4 +55,5 @@
     </div>
 </footer>
 </body>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </html>

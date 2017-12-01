@@ -27,6 +27,10 @@ body{
    width: 100%;
 }
 
+.typcn{
+   font-size: 3rem;
+   
+}
 
 
 .logo{
@@ -48,4 +52,12 @@ span a{
 
 .school{
    text-align: center;
+}
+
+.filterDiv{
+   display: none;
+}
+
+.show{
+   display: block;
 }

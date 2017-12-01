@@ -4,20 +4,15 @@
 
 .maincontainer{
     width:100%;
-
     background-color: #0fc17f;
     background-size: cover;
   
 }
 
-.main_text{
-    color:white;
-    text-align: center;
-    margin-top: 50%;
-    margin-bottom: 50%;
-    font-family: 'Ubuntu';
-    font-size: 3rem;
+body{
+    width: 100%;
 }
+
 
 .subtext{
     font-size: 2rem;
@@ -39,10 +34,6 @@
     text-align: center;
     margin-top: 25%;
     
-}
-
-.search{
-    text-align: center;
 }
 
 #search_box{
@@ -75,32 +66,101 @@
     text-align: center;
     color:white;
     letter-spacing: 2px;
-     font-family:'Ubuntu', sans-serif; 
+    font-family:'Ubuntu', sans-serif; 
     
 }
 
 .start{
-    border-right: .5px solid white;
-    text-align: right;
+    border-bottom:.5px white;
+    text-align: center;
+    
     
 }
 
-#enquire{
-    color:white;
-    letter-spacing: 0px;
-    font-size: 3rem;
-}
+
 
 #start_text{
-    font-size: 3rem;
+    padding-top: 25%;
     color:white;
+    letter-spacing: 0px;
+    font-size: 1.5rem;
+    
 }
+
+#driving_text{
+    display: none;
+        
+}
+ 
 
 .pos{
-    padding-bottom: 5%;
+    margin-top:40%;
+    padding-bottom: 0%;
+}
+
+.form{
+    text-align: center;
 }
 
 
+
+.discover_box{
+    text-align: center;
+    font-family:'Ubuntu', sans-serif; 
+    
+}
+
+#box_heading{
+    color:white;
+    font-size: 4rem;
+    font-family:'Ubuntu', sans-serif; 
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.car_logo{
+    width:10%;
+}
+
+#dublin_box{
+    background-color: #2eb2ff;
+    border-radius: 10px;
+    width:33%;
+}
+
+#cork_box{
+    background-color: #ff5c5c;
+    border-radius: 10px;
+    width:33%;
+}
+
+#galway_box{
+    background-color: #b760e6;
+    border-radius: 10px;
+    width:33%;
+}
+
+#blog_titles{
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 10%;
+    display: none;
+}
+
+#titles{
+    color:white;
+   
+}
+
+.typcn{
+   font-size: 3rem;
+   
+}
+
+.discover{
+    padding-top:100%;
+}
 
 /*---------------------Fonts*/
 
@@ -123,16 +183,50 @@
 }
 
 
+
+
 /*---------------------Media Query*/
 
 
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 992px) {
+    #start_text{
+        padding-top: 0%;
+        margin-top:0%;
+        font-size: 3rem;
+        display: block;
+        
+}
+
+ #driving_text{
+        font-size: 3rem;
+        display: block;
+        color: white;
+        
+}
+    
+    #blog_titles{
+    font-size: 3rem;
+    display: inherit;
+}
+
+.start{
+    border-right: .5px solid white;
+    text-align: right;
+    
+}
+
+.discover{
+    padding-top:0%;
+}
+
+.pos{
+     margin-top:0%;
+    padding-bottom: 5%;
+}
+
     
     
-    .main_text{
-        font-size: 4rem;
-    }
     
 }
 
@@ -141,11 +235,4 @@
         font-size: 30px;
     }
     
-    .main_img{
-     
-        width: 33.3%;
-    }
-    
-    
-   
 }
