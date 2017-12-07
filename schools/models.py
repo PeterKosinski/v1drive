@@ -12,28 +12,15 @@ class School(models.Model):
     email = models.EmailField(max_length=70,blank=True)
     phone_number = models.CharField(max_length=15, default=0)
     url = models.URLField()
-    areas = models.ManyToManyField(Area, blank=True)
+  
 
     
     Motorcycle = 'Motorcycle'
     Car = 'Car'
-    CarTowing = 'CarTowing'
-    RigidTruck = 'RigidTruck'
-    ArticulatedTruck = 'ArticulatedTruck'
-    MiniBus = 'MiniBus'
-    Coach = 'Coach'
-    
-    
-   
+  
     TRAININGAREAS = (
         (Motorcycle, 'Motorcycle'),
         (Car, 'Car'),
-        (CarTowing, 'Car Towing'),
-        (RigidTruck, 'Rigid Truck'),
-        (ArticulatedTruck, 'Articulated Truck'),
-        (MiniBus, 'Mini Bus'),
-        (Coach, 'Coach'),
-       
       
     )
     products = MultiSelectField(choices=TRAININGAREAS, default='Car')
@@ -57,52 +44,62 @@ class School(models.Model):
     
    
     
-    rsa_number = models.CharField(max_length=8 )
+    adi_number = models.CharField(max_length=8 )
 
-    Dublin1 = 'Dublin 1'
-    Dublin2 = 'Dublin 2'
-    Dublin3 = 'Dublin 3'
-    Dublin4 = 'Dublin 4'
-    Dublin5 = 'Dublin 5'
-    Dublin6 = 'Dublin 6'
-    Dublin7 = 'Dublin 7'
-    Dublin8 = 'Dublin 8'
-    Dublin9 = 'Dublin 9'
-    Dublin10 = 'Dublin 10'
-    Dublin11 = 'Dublin 11'
-    Dublin12 = 'Dublin 12'
-    Dublin13 = 'Dublin 13'
-    Dublin14 = 'Dublin 14'
-    Dublin15 = 'Dublin 15'
-    Dublin16 = 'Dublin 16'
-    Dublin17 = 'Dublin 17'
-    Dublin18 = 'Dublin 18'
-    Dublin20 = 'Dublin 20'
-    Dublin22 = 'Dublin 22'
-    Dublin24 = 'Dublin 24'
+    Carlow = 'Carlow'
+    Cavan = 'Cavan'
+    Clare = 'Clare'
+    Cork = 'Cork'
+    Donegal = 'Donegal'
+    Dublin = 'Dublin'
+    Galway = 'Galway'
+    Kerry = 'Kerry'
+    Kildare = 'Kildare'
+    Kilkenny = 'Kilkenny'
+    Laois = 'Laois'
+    Leitrim = 'Leitrim'
+    Limerick = 'Limerick'
+    Longford = 'Longford'
+    Louth = 'Louth'
+    Mayo = 'Mayo'
+    Meath = 'Meath'
+    Monaghan = 'Monaghan'
+    Offaly = 'Offaly'
+    Roscommon = 'Roscommon'
+    Sligo = 'Sligo'
+    Tipperary = 'Tipperary'
+    Waterford = 'Waterford'
+    Westmeath = 'Westmeath'
+    Wexford = 'Wexford'
+    Wicklow = 'Wicklow'
    
     AREAS = (
-        (Dublin1, 'Dublin 1'),
-        (Dublin2, 'Dublin 2'),
-        (Dublin3, 'Dublin 3'),
-        (Dublin4, 'Dublin 4'),
-        (Dublin5, 'Dublin 5'),
-        (Dublin6, 'Dublin 6'),
-        (Dublin7, 'Dublin 7'),
-        (Dublin8, 'Dublin 8'),
-        (Dublin9, 'Dublin 9'),
-        (Dublin10, 'Dublin 10'),
-        (Dublin11, 'Dublin 11'),
-        (Dublin12, 'Dublin 12'),
-        (Dublin13, 'Dublin 13'),
-        (Dublin14, 'Dublin 14'),
-        (Dublin15, 'Dublin 15'),
-        (Dublin16, 'Dublin 16'),
-        (Dublin17, 'Dublin 17'),
-        (Dublin18, 'Dublin 18'),
-        (Dublin20, 'Dublin 20'),
-        (Dublin22, 'Dublin 22'),
-        (Dublin24, 'Dublin 24'),
+        (Carlow, 'Carlow'),
+        (Cavan, 'Cavan'),
+        (Clare, 'Clare'),
+        (Cork, 'Cork'),
+        (Donegal, 'Donegal'),
+        (Dublin, 'Dublin'),
+        (Galway, 'Galway'),
+        (Kerry, 'Kerry'),
+        (Kildare, 'Kildare'),
+        (Kilkenny, 'Kilkenny'),
+        (Laois, 'Laois'),
+        (Leitrim, 'Leitrim'),
+        (Limerick, 'Limerick'),
+        (Longford, 'Longford'),
+        (Louth, 'Louth'),
+        (Mayo, 'Mayo'),
+        (Meath, 'Meath'),
+        (Monaghan, 'Monaghan'),
+        (Offaly, 'Offaly'),
+        (Roscommon, 'Roscommon'),
+        (Sligo, 'Sligo'),
+        (Tipperary, 'Tipperary'),
+        (Waterford, 'Waterford'),
+        (Westmeath, 'Westmeath'),
+        (Wexford, 'Wexford'),
+        (Wicklow, 'Wicklow')
       
     )
     Area = MultiSelectField(choices=AREAS, default='Dublin1')

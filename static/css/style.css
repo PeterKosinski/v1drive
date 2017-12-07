@@ -1,5 +1,44 @@
 /*---------------------Container*/
 
+/*---------------------Menu*/
+.menu-bar {
+    position: absolute;
+    height: 14px;
+    margin-left: 70%;
+    margin-top:10%;
+}
+
+.bars {
+    
+    display: block;
+    width: 20px;
+    height: 3px;    
+    background-color: white;
+    box-shadow: 0 5px 0 white, 0 10px 0 white;
+}
+
+.menu {
+    display: none; 
+    width: 100%;
+    padding: 30px 10px 50px;
+    margin-right:20%;
+    margin-top: 25%;
+    text-align: center;
+    background-color: #fff;
+}
+.menu ul {
+    margin-bottom: 0;
+}
+.menu a {
+    color: #333; 
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+.menu a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
 /*---------------------Main page*/
 
 .maincontainer{
@@ -11,6 +50,14 @@
 
 body{
     width: 100%;
+}
+
+container{
+    width: 100%;
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 
@@ -106,6 +153,7 @@ body{
 
 .discover_box{
     text-align: center;
+    width: 100%;
     font-family:'Ubuntu', sans-serif; 
     
 }
@@ -116,6 +164,7 @@ body{
     font-family:'Ubuntu', sans-serif; 
     margin-bottom: 10%;
     margin-top: 10%;
+    text-align: center;
 }
 
 .car_logo{
@@ -125,20 +174,10 @@ body{
 #dublin_box{
     background-color: #2eb2ff;
     border-radius: 10px;
-    width:33%;
+    text-align: center;
 }
 
-#cork_box{
-    background-color: #ff5c5c;
-    border-radius: 10px;
-    width:33%;
-}
 
-#galway_box{
-    background-color: #b760e6;
-    border-radius: 10px;
-    width:33%;
-}
 
 #blog_titles{
     text-align: center;
@@ -155,11 +194,12 @@ body{
 
 .typcn{
    font-size: 3rem;
+   color: white;
    
 }
 
 .discover{
-    padding-top:100%;
+    padding-top:50%;
 }
 
 /*---------------------Fonts*/
@@ -167,12 +207,10 @@ body{
 .logo{
     font-family:'Ubuntu', sans-serif; 
     font-weight: 700;
-    width: 100%;
     font-size: 19px;
     letter-spacing: 9px;
     text-align: center;
     margin: 5% 0% 10%;
-    padding:5px;
     color: #fefefe;
     
 
@@ -225,9 +263,60 @@ body{
     padding-bottom: 5%;
 }
 
+.discover{
+    padding-top:10%;
+}
+
+
+
+
+.menu-bar {
+    position: absolute;
+    height: 14px;
+    margin-left: -10px;
+    margin-top:10%;
+}
+
+.bars {
+    
+    display: block;
+    width: 20px;
+    height: 3px;    
+    background-color: white;
+    box-shadow: 0 5px 0 white, 0 10px 0 white;
+}
+
+.menu {
+    display: none; 
+    width: 100%;
+    padding: 30px 10px 50px;
+    margin-right:20%;
+    margin-top: 25%;
+    text-align: center;
+    background-color: #fff;
+}
+.menu ul {
+    margin-bottom: 0;
+}
+.menu a {
+    color: #333; 
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+.menu a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+
     
     
     
+}
+
+@media (min-width: 768px){
+ .col-sm-10{
+    float: none; }
 }
 
 @media only screen and (min-width: 800px) {
