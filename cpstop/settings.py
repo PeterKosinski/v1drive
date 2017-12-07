@@ -27,7 +27,7 @@ SECRET_KEY = '4fpf=l&xvj9@rwdoc@5=f@xa=xwow2%6&!u*zn-m#5a&k-jmhj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['v1drive-peterkosinski.c9users.io']
+ALLOWED_HOSTS = ['compare-stop-v1.herokuapp.com','v1drive-peterkosinski.c9users.io']
 
 
 # Application definition
